@@ -7,21 +7,15 @@ This repository provides an implementation of MMD for domain adaptation using Py
 The Maximum Mean Discrepancy (MMD) measures the distance between two probability distributions in a Reproducing Kernel Hilbert Space (RKHS).
 Given source domain samples and target domain samples as:
 
-$$
-\{x_i\}_{i=1}^n, \{y_j\}_{j=1}^m
-$$
+$$\{x_i\}_{i=1}^n, \{y_j\}_{j=1}^m$$
 
 respectively we define the squared MMD is defined as:
 
-$$
-\text{MMD}^2(\mathcal{D}_S, \mathcal{D}_T) = \left\| \frac{1}{n} \sum_{i=1}^{n} \phi(x_i) - \frac{1}{m} \sum_{j=1}^{m} \phi(y_j) \right\|_{\mathcal{H}}^2
-$$
+$$\text{MMD}^2(\mathcal{D}_S, \mathcal{D}_T) = \left\| \frac{1}{n} \sum_{i=1}^{n} \phi(x_i) - \frac{1}{m} \sum_{j=1}^{m} \phi(y_j) \right\|_{\mathcal{H}}^2$$
 
 Using the kernel trick, this can be computed as:
 
-$$
-\text{MMD}^2_k(P,Q) := \mathbb{E}_{x,x'}[k(x,x')] + \mathbb{E}_{y,y'}[k(y,y')] - 2\mathbb{E}_{x,y}[k(x,y)]
-$$
+$$\text{MMD}^2_k(P,Q) := \mathbb{E}_{x,x'}[k(x,x')] + \mathbb{E}_{y,y'}[k(y,y')] - 2\mathbb{E}_{x,y}[k(x,y)]$$
 
 where $k(\cdot,\cdot)$ is a positive definite kernel function.
 
