@@ -15,6 +15,7 @@ Using the kernel trick, this can be computed as:
 $$
 \text{MMD}^2_k(P,Q) := \mathbb{E}_{x,x'}[k(x,x')] + \mathbb{E}_{y,y'}[k(y,y')] - 2\mathbb{E}_{x,y}[k(x,y)]
 $$
+
 where $k(\cdot,\cdot)$ is a positive definite kernel function.
 
 The empirical MMD can be estimated using sample distributions:
